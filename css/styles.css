@@ -32,16 +32,9 @@
   box-sizing: border-box;
 }
 
-body {
-  font-weight: 400;
-  font-size: 18px;
-  font-family: 'Roboto-Regular', sans-serif;
-}
-
-/* header */
-
-.wrapper {
-  width: 100%;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 :root {
@@ -53,11 +46,23 @@ body {
   --color-gray: #839aa9;
 }
 
+body {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+/* header */
+
+.wrapper {
+  background: url(../img/SVG/hero_vector.svg) no-repeat;
+}
+
 ul {
   list-style: none;
 }
 
-.conteiner {
+.container {
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
@@ -89,18 +94,53 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 48px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+.menu ul li:nth-child(1) {
+  width: 80px;
+  height: 24px;
+}
+
+.menu ul li:nth-child(2) {
+  width: 158px;
+  height: 24px;
+}
+
+.menu ul li:nth-child(3) {
+  width: 146px;
+  height: 24px;
+}
+
+.menu ul li:nth-child(4) {
+  width: 69px;
+  height: 24px;
+}
+
+.menu ul li:hover {
+  color: var(--color-orange);
+  font-weight: 700;
+  font-family: 'Roboto-SemiBold', sans-serif;
+  cursor: pointer;
 }
 
 .btn {
   border-radius: 8px;
   border: none;
   padding: 16px 32px;
-  width: 151px;
+  min-width: 151px;
   height: 53px;
   margin-left: 24px;
   background-color: var(--color-orange);
   color: var(--color-white);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .btn:hover {
@@ -112,12 +152,12 @@ ul {
 
 .hero {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../img/SVG/background\ elements.svg) no-repeat;
+  background-position: 820px 200px;
   gap: 65px;
-  margin: 212px 705px 236px 100px;
-  background: url(../img/SVG/hero_vector.svg) no-repeat;
-  background-size: cover;
 }
 
 .hero-info {
@@ -126,12 +166,13 @@ ul {
 }
 
 .hero-info h1 {
+  height: 178px;
   font-weight: 400;
   font-size: 72px;
   letter-spacing: 0.05em;
   color: var(--color-dark);
-  margin-bottom: 40px;
   font-family: 'Rowdies', sans-serif;
+  line-height: 100%;
 }
 
 .hero-txt {
@@ -143,8 +184,6 @@ ul {
 .hero-txt p {
   font-weight: 400;
   font-size: 22px;
-
-  /* line-height: 34px; */
   line-height: 155%;
   color: var(--color-dark);
   margin-bottom: 24px;
@@ -159,7 +198,7 @@ ul {
   color: var(--color-white);
   border: none;
   font-family: 'Roboto', sans-serif;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
 }
 
 .hero-btn:hover {
@@ -167,34 +206,45 @@ ul {
   background-color: var(--color-yellow);
 }
 
+.hero_dog {
+  position: relative;
+  top: 90px;
+}
+
 /* our_information */
 
-.our_information {
+.our_information .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 40px;
-  margin: 155px 0px 155px 759px;
+  align-items: center;
+  justify-content: center;
+  gap: 96px;
+}
+
+.information-dog {
+  background: url(../img/SVG/Vector.svg) no-repeat;
+  background-position: center bottom 45px;
+  margin-left: -85px;
+}
+
+.information-txt {
   width: 640px;
   height: 393px;
 }
 
-.our_information h2 {
+.information-txt h2 {
   font-weight: 400;
   font-size: 56px;
   color: var(--color-dark);
   font-family: 'Rowdies', sans-serif;
 }
 
-.our_information p {
+.information-txt p {
   font-weight: 400;
   font-size: 22px;
   margin-top: 8px;
-
-  /* line-height: 34px; */
-  line-height: 155%;
-  color: var(--dog-landing-3-c4);
+  line-height: 34px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 24px;
 }
 
 .btn_info {
@@ -206,7 +256,7 @@ ul {
   border: none;
   font-family: 'Roboto', sans-serif;
   color: var(--color-white);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn_info:hover {
@@ -216,13 +266,7 @@ ul {
 
 /* services */
 
-.services {
-  width: 1228px;
-  height: 358px;
-  margin-top: 32px;
-}
-
-.services h2 {
+.services .container h2 {
   margin: 0px 373.5px 48px 373.5px;
   font-weight: 400;
   font-size: 56px;
@@ -235,6 +279,17 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 24px;
+}
+
+.more-service {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-orange);
+  text-decoration: none;
 }
 
 /* card */
@@ -269,13 +324,13 @@ ul {
   padding: 147px 71px 47px 71px;
 }
 
+/* customer */
+
 .customer {
   width: 1200px;
   height: 617px;
   margin-top: 96px;
 }
-
-/* customer */
 
 .customer h2 {
   font-weight: 400;
